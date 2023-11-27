@@ -27,11 +27,8 @@ async function getContent() {
 
 export default async function PrivacyNextPage() {
   const { MDXContent } = await getContent()
-  // console.log(MDXContent)
-  // console.log("Privacy", PrivacyPage)
   return (
     <article className='prose mx-auto'>
-      {/* <PrivacyPage /> */}
       <MDXContent />
     </article>
   );
