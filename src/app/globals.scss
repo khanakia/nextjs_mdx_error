@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+@layer components {
+  .btn,
+  a.btn {
+    @apply text-white bg-blue-800 rounded hover:text-white hover:bg-blue-600 focus:outline-none font-medium text-sm px-5 py-1.5 text-center inline-flex items-center dark:focus:ring-[#ee4429]/50;
+
+    &-main {
+      @apply rounded-full;
+    }
+
+    &-red {
+      @apply bg-red-500 hover:bg-red-600 rounded-full;
+    }
+
+    &-save {
+      @apply bg-green-600 hover:bg-green-500 rounded-full;
+    }
+
+    &-xs {
+      @apply py-1;
+    }
+
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #cccccc;
+      background-color: #cccccc;
+      color: #666666;
+    }
+  }
+
+  .form-control {
+    @apply block w-full rounded-md px-3 py-1.5 text-gray-900 placeholder:text-gray-400  border border-gray-300 focus:border-red-200 sm:text-sm sm:leading-6;
+  }
+}
